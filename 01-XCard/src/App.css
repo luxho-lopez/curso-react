@@ -1,0 +1,43 @@
+.follow-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: .8rem;
+}
+
+.follow-card-header {
+    display: flex;
+    align-items: center;
+    gap: 4px
+}
+
+.follow-card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.follow-card-info-username {
+    opacity: .6;
+}
+
+.follow-card-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.follow-card-button {
+    cursor: pointer;
+    margin-left: 16px;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+}
+
+.follow-card-button:hover {
+    background-color: #000015;
+    color: #fff;
+    transition: .3s ease;
+}
