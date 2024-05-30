@@ -2,15 +2,46 @@ import React from 'react';
 import './App.css'
 import { XFollowCard } from './XFollowCard.jsx';
 
-export function App() {
+const usuarios = [
+    {
+        id: 1,
+        name: "Miguel Angel",
+        userName: "midudev",
+        isFollowing: false,
+    },
+    {
+        id: 2,
+        name: "Pablo Hernandez",
+        userName: "pheralb",
+        isFollowing: false,
+    },
+    {
+        id: 3,
+        name: "Vanderhart",
+        userName: "vxnder",
+        isFollowing: true,
+    }
+]
 
-    const format = (userName) => `@${userName}`
+export function App() {
 
     return(
         <section className='App'>
-            <XFollowCard formatUserName={format} isFollowing name="Miguel Angel" userName="midudev" />
-            <XFollowCard formatUserName={format} isFollowing={false} name="Pablo Hernandez" userName="pheralb" />
-            <XFollowCard formatUserName={format} isFollowing name="Vanderhart" userName="vxnder" />
+            {
+                usuarios.map( usuario => {
+                    const { id, name, userName, isFollowing } = usuario;
+
+                    return(
+                        <XFollowCard 
+                            key={id}
+                            userName={userName}
+                            initialIsFollowing={isFollowing}
+                        >
+                            {name}
+                        </XFollowCard>
+                    );
+                })
+            }
         </section>
     );
 };

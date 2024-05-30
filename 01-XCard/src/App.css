@@ -34,10 +34,31 @@
     border-radius: 999px;
     padding: 6px 16px;
     font-weight: bold;
+    border: 1px solid #000;
+    transition: .3s ease; 
 }
 
-.follow-card-button:hover {
-    background-color: #000015;
+.follow-card-button.is-following {
+    border: 1px solid #bbb;
+    background: transparent;
     color: #fff;
-    transition: .3s ease;
+    width: 140px;
+}
+
+.follow-card-button.is-following:hover {
+    background-color: rgba(244, 33, 46, 0.1);
+    color: red;
+    border: 1px solid rgb(103, 7, 15);
+}
+
+.follow-card-button.is-following:hover .follow-card-button-text {
+    display: none;
+}
+
+.follow-card-button.is-following:hover .follow-card-button-textStop {
+    display: block;
+}
+
+.follow-card-button-textStop {
+    display: none;
 }
